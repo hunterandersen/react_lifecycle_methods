@@ -14,32 +14,19 @@ class App extends Component {
 
   componentDidMount() {
     this.setState({
-      ...this.state,
-      ...{
-        hasLoaded: true,
-      },
+      hasLoaded: true,
     });
   }
 
   handleClick = () => {
-    let tempObj = {
-      hasLoaded: !this.state.hasLoaded,
-    };
-
     this.setState({
-      ...this.state,
-      ...tempObj,
+      hasLoaded: !this.state.hasLoaded,
     });
   };
 
   handleInput = (event) => {
-    let tempObj = {
-      text: event.target.value,
-    };
-
     this.setState({
-      ...this.state,
-      ...tempObj,
+      text: event.target.value,
     });
   };
 
